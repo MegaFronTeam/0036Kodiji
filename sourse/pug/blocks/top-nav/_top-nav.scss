@@ -1,25 +1,64 @@
 .top-nav {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(16)};
+	--sPB: #{rem(16)};
 	// --sTPB: #{rem()};
+	padding-bottom: var(--sPB);
+	padding-top: var(--sPT);
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(39.5)};
+	--sPB: #{rem(39.5)};
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		// --bs-gutter-y: var(--bs-gutter-x);
 
+		align-items: center;
 	}
-	.section-title{
-		
+	&__logo {
+		position: relative;
+    z-index: 10;
+		display: block;
+		width: 100%;
+		max-width: rem(102);
+		img {
+			width: 100%;
+		}
 	}
-	&__col{
-
+	&__wrap {
+		position: relative;
+    z-index: 10;
+		display: flex;
+		align-items: center;
 	}
-	&__item{
-
+	&__tel {
+		color: #fff;
+		font-family: $font-family-monospace;
+		font-size: rem(16);
+		font-weight: 800;
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(16);
+			margin-left: auto;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(18);
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(41);
+		}
+		&:hover {
+			color: $primary;
+		}
 	}
-	&__slide{
-		height: auto;
+	&__btn {
+		width: 100%;
+		max-width: rem(158);
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(16);
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(57);
+		}
 	}
-
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}

@@ -1,10 +1,25 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.lines
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.row.row
+				.col-lg-6
+					h1 Your ecommerce. Your&nbsp;brand. Your rules.
+					p PrestaShop offers you a&nbsp;highly flexible and scalable ecommerce platform to&nbsp;launch an&nbsp;online business 100% owned and designed by&nbsp;you.
+					+e.btn.btn.btn-primary(href='#') Order project
+				.col-lg-6
+					+img('img/headerBlock-img-1.png').img
+				.col-12
+					+e.inner-row.row
+						mixin item(img, text)
+							+e.item
+								+img(`img/${img}`)
+								p!= text
+						.col-md-6.col-lg-4
+							+item('headerBlock-img-2.jpg', 'Ready-made solutions')
+						.col-md-6.col-lg-4
+							+item('headerBlock-img-3.jpg', 'Individual project')
+						.col-md-6.col-lg-4
+							+item('headerBlock-img-4.jpg', 'Integration with CRM* ERP* WMS*')
 	// end headerBlock

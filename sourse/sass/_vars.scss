@@ -14,7 +14,7 @@ $rfs-breakpoint: 1200px !default;
 
 $font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; 
 
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace: 'Nunito', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -26,13 +26,13 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-300: #A1B6D8;
+$gray-400:  #BEBEBE;
+$gray-500: #636363;
+$gray-600: #707680;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-800: #657A9C;
+$gray-900: #011638;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -55,13 +55,13 @@ $grays: (
 // scss-docs-start color-variables
 $blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+$purple:  #6367EF;
 $pink:    #d63384 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #198754 !default;
-$teal:    #20c997 !default;
+$teal:    #00CEA5;
 $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
 
@@ -315,9 +315,9 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $teal !default;
 $secondary:     $gray-600 !default;
-$success:       $green !default;
+$success:       $blue !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
@@ -464,7 +464,7 @@ $emphasis-color:            $black !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         none !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -509,7 +509,7 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1320px
+  xxl: 1252px
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -521,12 +521,12 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           rem(20) !default;
 $grid-row-columns:            6 !default;
 
 // Container padding
 
-$container-padding-x: $grid-gutter-width !default;
+$container-padding-x: rem(36) !default;
 
 
 // Components
@@ -606,7 +606,7 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-sm:                rem(14) !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
 $font-weight-lighter:         lighter !default;
@@ -623,11 +623,11 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
+$h1-font-size:                rem(52) !default;
+$h2-font-size:                rem(36) !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                rem(20) !default;
 $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
@@ -646,8 +646,8 @@ $font-sizes: (
 $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        400 !default;
+$headings-line-height:        1.4 !default;
 $headings-color:              null !default;
 // scss-docs-end headings-variables
 
@@ -801,16 +801,16 @@ $input-btn-border-width:      var(--#{$prefix}border-width) !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
-$btn-font-family:             $input-btn-font-family !default;
-$btn-font-size:               $input-btn-font-size !default;
-$btn-line-height:             $input-btn-line-height !default;
+$btn-padding-y:               rem(12) !default;
+$btn-padding-x:               rem(16) !default;
+$btn-font-family:             'Inter' !default;
+$btn-font-size:               rem(18) !default;
+$btn-line-height:             1.22 !default;
 $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
-$btn-font-size-sm:            $input-btn-font-size-sm !default;
+$btn-padding-y-sm:            rem(9.5) !default;
+$btn-padding-x-sm:            rem(14) !default;
+$btn-font-size-sm:            rem(14) !default;
 
 $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
 $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
@@ -818,20 +818,20 @@ $btn-font-size-lg:            $input-btn-font-size-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
-$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+$btn-font-weight:             800 !default;
+$btn-box-shadow:              none !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 $btn-disabled-opacity:        .65 !default;
-$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+$btn-active-box-shadow:       none !default;
 
-$btn-link-color:              var(--#{$prefix}link-color) !default;
-$btn-link-hover-color:        var(--#{$prefix}link-hover-color) !default;
-$btn-link-disabled-color:     $gray-600 !default;
+$btn-link-color:              #fff !default;
+$btn-link-hover-color:        #fff !default;
+$btn-link-disabled-color:     #fff !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius !default;
-$btn-border-radius-sm:        $border-radius-sm !default;
+$btn-border-radius:           rem(30) !default;
+$btn-border-radius-sm:        rem(50) !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;

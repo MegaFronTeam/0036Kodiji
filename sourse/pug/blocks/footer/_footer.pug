@@ -1,9 +1,25 @@
 mixin footer()
 	+b.FOOTER.footer.section
+		.lines
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-lg-4.order-1
+					+e.logo(href="/"): +img('img/svg/logo.svg') 
+				.col-lg-4.order-3.order-lg-2
+					+e.wrap
+						+mnu()
+						+soc()
+						p © Copyright 2007-#[span] KODIJI. All rights reserved.
+						+e.inner-row.row
+							.col-auto
+								a(href="#") Legal Notice 
+							.col-auto
+								a(href="#") Terms of Use
+							.col-auto
+								a(href="#") Personal Data Protection Policy
+				.col-lg.order-2.order-lg-3
+					+e.wrapper
+						+e.tel(href='tel:+48791894254')
+							+img('img/svg/tel.svg')
+							| +48-791-894-254
+						+e.btn.btn.btn-sm.btn-primary(href='#') Contuct Us

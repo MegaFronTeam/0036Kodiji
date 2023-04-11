@@ -9,7 +9,9 @@
 		--sPB: #{rem(90)};
 		--sTPB: #{rem(40)};
 	}
+	// @include media-breakpoint-up(lg) {
 
+	// }
 	--sPT: #{rem(80 * .5)};
 	--sPB: #{rem(90 * .5)};
 	--sTPB: #{rem(40 * .5)};

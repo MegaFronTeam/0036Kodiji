@@ -50,3 +50,17 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin chooseLang()
+	+b.chooseLang--js
+		+e.btn 
+			span.active EN
+			span PL
+			+icon('drop')
+		+e.dropdown
+			+e.SPAN.link.active 
+				+icon('check')
+				| English
+			+e.SPAN.link
+				+icon('check') 
+				| Poland

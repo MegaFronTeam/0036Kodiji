@@ -21,13 +21,21 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col.order-lg-0.order-last
+			+e.row.row
+				.col-auto.col-xl-2
+					+e.logo(href="/"): +img('img/svg/logo.svg') 
+				.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
+							+e.tel.d-lg-none(href='tel:+48791894254') +48-791-894-254
+							+e.btn.btn.btn-sm.btn-primary.d-lg-none Contuct Us
+				.col-auto.col-lg.ms-auto
+					+e.wrap
+						+e.tel.d-none.d-lg-block(href='tel:+48791894254') +48-791-894-254
+						+e.btn.btn.btn-sm.btn-primary.d-none.d-lg-block Contuct Us
+						+chooseLang
 				.col-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav

@@ -3,7 +3,7 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(38px);
 		flex-wrap: wrap;
 	}
 
@@ -11,6 +11,7 @@
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
+	z-index: 10;
 	li{
 		
 		// margin-left: 0;
@@ -19,16 +20,26 @@
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: 0 calc(var(--bs-gutter-x) / 2);
+		color: #fff;
+		font-weight: 800;
+		font-family: $font-family-monospace;
+		font-size: rem(16);
+		&:hover {
+			color: $primary;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(18);
+		} 
 	}
 }
 
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
+	--h: #{rem(2)};
 	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--position: calc(var(--h) * 4);
 	&.on span {
 		--color: transparent;
 	}
@@ -40,8 +51,9 @@
 	display: block;
 	height: calc(var(--h)* 12);
 	position: relative; 
-	font-size: 32px;
+	font-size: 24px;
 	width: 1em;
+	z-index: 10;
 	cursor: pointer;
 	span:after,
 	span:before {
@@ -89,7 +101,7 @@
 		top: 0;
 		// left: 0;
 		right: 0;
-		background-color: $body-bg;
+		background-color: $body-color;
 		&:not(.active){
 			transform: translate3d(120%, 0,0);
 			--opacity: 0;
@@ -101,13 +113,11 @@
 		will-change: transform;
 
 		
-		.toggle-menu-mobile { 
-			margin-left: -15%;
+		.toggle-menu-mobile {
 			position: absolute; 
-			left: 0;
-			right: auto;
+			right: rem(10);
 			color: #FFF;
-			top: 10px;
+			top: rem(8);
 			z-index: 9999; 
 			span:after,
 			span:before {
@@ -115,11 +125,13 @@
 			}
 		}
 		&__inner {
-			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
+			padding: calc(env(safe-area-inset-top, 0px) + #{rem(40)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(40)});
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
 			height: 100vh;
+			display: flex;
+			flex-direction: column;
 			// @include mt(.3s);
 			// transition-delay: .4s;
 			// opacity: var(--opacity);
@@ -147,6 +159,19 @@
 				padding: 10px;
 				display: block;
 
+			}
+		}
+		.top-nav {
+			&__tel {
+				margin-top: auto;
+				padding: 0 rem(10);
+				margin-bottom: rem(16);
+				text-align: center;
+			}
+			&__btn {
+				max-width: calc(100% - 20px);
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}

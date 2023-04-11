@@ -1,27 +1,116 @@
-.footer {
-		
-	margin-top: auto;
-// --sPT: #{rem()};
-	// --sPB: #{rem()};
+.footer {	
+	--sPT: #{rem(80)};
+	--sPB: #{rem(35)};
 	// --sTPB: #{rem()};
+	background-color: $body-color;
+	color: #fff;
+	position: relative;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(124)};
+		--sPB: #{rem(71)};
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-y: #{rem(16)};
 
 	}
-	.section-title{
-		
+	&__logo {
+		display: block;
+		width: 100%;
+		max-width: rem(102);
+		img {
+			width: 100%;
+		}
+		@include media-breakpoint-down(lg) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
-	&__col{
-
+	&__wrap {
+		text-align: center;
+		.menu {
+			--bs-gutter-y: #{rem(15)};
+			flex-direction: column;
+			justify-content: center;
+			max-width: max-content;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: rem(23);
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(46);
+			}
+			& > * {
+				margin-top: var(--bs-gutter-y);
+			}
+			a {
+				text-align: left;
+				font-weight: 400;
+			}
+		}
+		.soc {
+			justify-content: center;
+			margin-bottom: rem(23);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(59);
+			}
+		}
+		p {
+			font-size: rem(14);
+			line-height: 1.4;
+			color: $gray-800;
+			margin-bottom: rem(5);
+		}
 	}
-	&__item{
-
+	&__inner-row {
+		--bs-gutter-x: #{rem(10)};
+		--bs-gutter-y: #{rem(10)};
+		justify-content: center;
+		a {
+			font-size: rem(12);
+			font-weight: 300;
+			border-bottom: 1px solid $gray-800;
+			&:not(:hover) {
+				color: $gray-800;
+			}
+		}
 	}
-	&__slide{
-		height: auto;
+	&__wrapper {
+		max-width: rem(196);
+		margin-left: rem(53);
+		@include media-breakpoint-down(lg) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
-// 
+	&__tel {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+    max-width: max-content;
+		margin-bottom: rem(27);
+		font-family: $font-family-monospace;
+		font-size: rem(18);
+		font-weight: 800;
+		&:not(:hover) {
+			color: #fff;
+		}
+		img {
+			flex: 0 0 auto;
+			width: 100%;
+			max-width: rem(30);
+			margin-right: rem(10);
+		}
+	}
+	&__btn {
+		display: block;
+		width: 100%;
+		max-width: rem(158);
+		margin-left: auto;
+		@include media-breakpoint-down(lg) {
+			margin-right: auto;
+		}
+	}
 @include media-breakpoint-up(xl) {}
 
 @include media-breakpoint-up(lg) {}

@@ -3,7 +3,8 @@ mixin item-sos(icon, a='#')
 		if block
 			block
 		else
-			+icon(icon)
+			//- +icon(icon)
+			+img(`img/svg/${icon}.svg`)
 //- social buttons
 mixin soc()
 	+b.soc

@@ -4,21 +4,50 @@
 	<!-- start top-nav-->
 	<div class="top-nav block-with-lazy">
 		<div class="container">
-			<div class="row">
-				<div class="col order-lg-0 order-last">
+			<div class="top-nav__row row">
+				<div class="col-auto col-xl-2">
+					<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+					</a>
+				</div>
+				<div class="col-lg order-lg-0 order-last">
 					<div class="menu-mobile menu-mobile--js">
 						<div class="menu-mobile__inner">
 							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 							</div>
 							<nav>
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Products</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Resources</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">About</a></li>
 								</ul>
 							</nav>
+							<a class="top-nav__tel d-lg-none" href="tel:+48791894254">+48-791-894-254
+							</a>
+							<div class="top-nav__btn btn btn-sm btn-primary d-lg-none">Contuct Us
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-auto col-lg ms-auto">
+					<div class="top-nav__wrap">
+						<a class="top-nav__tel d-none d-lg-block" href="tel:+48791894254">+48-791-894-254
+						</a>
+						<div class="top-nav__btn btn btn-sm btn-primary d-none d-lg-block">Contuct Us
+						</div>
+						<div class="chooseLang chooseLang--js">
+							<div class="chooseLang__btn"> <span class="active">EN</span><span>PL</span>
+								<svg class="icon icon-drop ">
+									<use xlink:href="img/svg/sprite.svg#drop"></use>
+								</svg>
+							</div>
+							<div class="chooseLang__dropdown"><span class="chooseLang__link active"> 
+								<svg class="icon icon-check ">
+									<use xlink:href="img/svg/sprite.svg#check"></use>
+								</svg>English</span><span class="chooseLang__link">
+								<svg class="icon icon-check ">
+									<use xlink:href="img/svg/sprite.svg#check"></use>
+								</svg>Poland</span>
+							</div>
 						</div>
 					</div>
 				</div>

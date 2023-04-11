@@ -1,0 +1,28 @@
+mixin sYouNeed(data)
+	// start sYouNeed
+	+b.SECTION.sYouNeed.section#sYouNeed&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Everything you need to sell online
+				+e.line
+					span
+			+e.wrap
+				+e.img-wrap
+					+img('img/sYouNeed-img-1.png')
+				+e.img-wrap--2
+					+img('img/sYouNeed-img-2.png')
+				+e.row.row
+					mixin item(title)
+						.col-sm-6.col-lg-4
+							+e.item
+								h4!= title
+					+item('Catalog')
+					+item('Integration with delivery services')
+					+item('Integration with payment services')
+					+item('Analytics and reports on products and orders')
+					+item('Social media')
+					+item('CRM system')
+					+item('Blog, Newsletters')
+					+item('Integration with messengers and telephony')
+					+item('Integrations with Alegro, ceneo, facebook, instagram…')
+	// end sYouNeed
