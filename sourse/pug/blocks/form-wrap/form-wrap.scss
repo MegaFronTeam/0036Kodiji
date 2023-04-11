@@ -15,6 +15,29 @@
  		width: 100%;
  		display: block;
  	}
+	&__policy {
+		font-weight: 300;
+		color: $gray-400;
+		.custom-input {
+			padding-left: rem(24);
+			&__input {
+				width: rem(14);
+				height: rem(14);
+				border: 1px solid #ACB2BC;
+				background-color: transparent;
+				border-radius: 2px;
+				&:checked {
+					background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.76668 5.51662C2.85556 5.51662 2.9389 5.50262 3.01668 5.47462C3.09445 5.44662 3.16668 5.39951 3.23334 5.33329L7.01668 1.54995C7.1389 1.42773 7.20001 1.27773 7.20001 1.09995C7.20001 0.922173 7.13334 0.766618 7.00001 0.633285C6.87779 0.511062 6.72223 0.449951 6.53334 0.449951C6.34445 0.449951 6.1889 0.511062 6.06668 0.633285L2.76668 3.93328L1.31668 2.48328C1.19445 2.36106 1.04445 2.29995 0.866675 2.29995C0.688897 2.29995 0.533342 2.36662 0.400008 2.49995C0.277786 2.62217 0.216675 2.77773 0.216675 2.96662C0.216675 3.15551 0.277786 3.31106 0.400008 3.43328L2.30001 5.33329C2.36667 5.39995 2.4389 5.44707 2.51668 5.47462C2.59445 5.50218 2.67779 5.51618 2.76668 5.51662Z' fill='%23ACB2BC'/%3E%3C/svg%3E%0A");
+					background-repeat: no-repeat;
+					background-size: 8px 6px;
+					background-position: center;
+				}
+				&:focus {
+					box-shadow: none;
+				}
+			}
+		}
+	}
 }
 
 

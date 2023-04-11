@@ -2,12 +2,18 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
+			+e.wrap
+				+e.line
+				+e.row.row
+					.col-lg-6.ms-auto
+						+form-wrap
+							h2 Order your project
+							p Leave your contact details and we will call you within 1 hour and advise you on your issue
+							+input("Name*",'text')(required)
+							+input("Company",'')
+							+input("Phone",'tel')
+							+input("Email",'email')
+							+e.btn(type="submit").btn.btn-primary Order project
+							+policy
+				+img('img/sForm-img-1.png').img
 	// end sForm
