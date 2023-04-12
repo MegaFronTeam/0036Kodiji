@@ -567,7 +567,7 @@ iframe {
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #8FDFCF;
     --bs-btn-disabled-border-color: #8FDFCF;
-		&:active {
+		&:focus {
 			background-color: #00BA91;
 			box-shadow: 0px 0px 0px 4px rgba(0, 206, 165, 0.5) !important;
 		}
