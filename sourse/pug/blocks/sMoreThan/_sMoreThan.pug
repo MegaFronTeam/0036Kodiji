@@ -9,7 +9,7 @@ mixin sMoreThan(data)
 					span
 			+e.row.row
 				mixin item(img, text, avatar, title, subtext)
-					+e.item
+					+e.item(href='#')
 						+e.wrap
 							+e.text!= text
 							+e.contacts

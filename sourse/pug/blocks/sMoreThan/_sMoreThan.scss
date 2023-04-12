@@ -98,6 +98,13 @@
 		@include media-breakpoint-up(md) {
 			border-radius: rem(30);
 		}
+		&:hover {
+			.sMoreThan__wrap--img {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
 	}
 	&__wrap {
 		padding: rem(15);
@@ -114,6 +121,10 @@
 			@include block(392, 211);
 			@include media-breakpoint-up(md) {
 				padding: 0;
+			}
+			overflow: hidden;
+			img {
+				@include mt;
 			}
 		}
 	}
