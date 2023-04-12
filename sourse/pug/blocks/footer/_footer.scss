@@ -6,8 +6,8 @@
 	color: #fff;
 	position: relative;
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(124)};
-		--sPB: #{rem(71)};
+		--sPT: #{rem(136.800)};
+		--sPB: #{rem(61.400)};
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -24,6 +24,10 @@
 		@include media-breakpoint-down(lg) {
 			margin-left: auto;
 			margin-right: auto;
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-left: 124px;
+			margin-top: -13px;
 		}
 	}
 	&__wrap {

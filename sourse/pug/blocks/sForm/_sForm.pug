@@ -9,11 +9,12 @@ mixin sForm()
 						+form-wrap
 							h2 Order your project
 							p Leave your contact details and we will call you within 1 hour and advise you on your issue
-							+input("Name*",'text')(required)
-							+input("Company",'')
+							+input("Name*",'text')(required).is-invalid
+							+input("Company",'text').is-valid
 							+input("Phone",'tel')
 							+input("Email",'email')
 							+e.btn(type="submit").btn.btn-primary Order project
 							+policy
-				+img('img/sForm-img-1.png').img
+				img(src='img/sForm-img-1.png', alt='').img
+				img(src='img/sForm-img-2.png', alt='').img-2
 	// end sForm

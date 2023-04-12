@@ -3,10 +3,40 @@
 			// @extend .form-group;
 			
 		}
-		&__input{
-			// @extend .form-control;
+	&__input{
+		// @extend .form-control;
 		//  outline: 0 !important;
-		 resize: none;
+		resize: none;
+		padding: rem(11) rem(26);
+		@include media-breakpoint-up(md) {
+			padding: rem(13) rem(30);
+		}
+		&:focus {
+			box-shadow: 0 0px 1px 4px #7DD2C1;
+			border-color: #7DD2C1;
+		}
+		&.is-invalid {
+			background-image: none;
+			box-shadow: 0 0px 1px 4px #D27D7D;
+			border-color: #D27D7D;
+			padding: rem(11) rem(26);
+			@include media-breakpoint-up(md) {
+				padding: rem(13) rem(30);
+			}
+		}
+		&.is-valid {
+			background-image: none;
+			box-shadow: 0 0px 1px 4px #7DD2C1;
+			border-color: #7DD2C1;
+			padding: rem(11) rem(26);
+			@include media-breakpoint-up(md) {
+				padding: rem(13) rem(30);
+			}
+			&:focus {
+				box-shadow: 0 0px 1px 4px #7DD2C1;
+				border-color: #7DD2C1;
+			}
+		}
  	}
  	&__btn{
  		cursor: pointer;
