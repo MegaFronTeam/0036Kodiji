@@ -356,6 +356,17 @@
 			}
 		}
 	}
+	&--3 {
+		@include media-breakpoint-up(lg) {
+			--sPB: #{rem(130)};
+			.section-title {
+				padding-bottom: rem(86);
+				&__line {
+					height: rem(168.797);
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
