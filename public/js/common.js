@@ -394,6 +394,37 @@ function eventHandler() {
 
 	});
 
+	const sMoreThanSwiper = new Swiper('.sMoreThan__slider--js', {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 20,
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			998: {
+				slidesPerView: 3,
+			}
+		}
+	});
+
+	const sProjectSwiper = new Swiper('.sProject__slider--js', {
+		slidesPerView: 1,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
 	// modal window
 	document.addEventListener('click', function (e) {
 		let chooseLangTarget = e.target.closest('.chooseLang--js');
