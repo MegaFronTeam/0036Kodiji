@@ -71,9 +71,12 @@
 		--bs-gutter-y: #{rem(10)};
 		justify-content: center;
 		a {
-			font-size: rem(12);
+			font-size: rem(11);
 			font-weight: 300;
 			border-bottom: 1px solid $gray-800;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(12);
+			}
 			&:not(:hover) {
 				color: $gray-800;
 			}

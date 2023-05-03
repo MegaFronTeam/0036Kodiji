@@ -1,7 +1,7 @@
 // start .sMoreThan
 .sMoreThan {
-	--sPT: #{rem(60)};
-	--sPB: #{rem(60)};
+	--sPT: #{rem(94)};
+	--sPB: #{rem(90)};
 	--sTPB: #{rem(28.800)};
 	background-color: $body-color;
 	color: #fff;
@@ -20,8 +20,12 @@
 		z-index: -1;
 		pointer-events: none;
 	}
-	@include media-breakpoint-up(sm) {
+	// @include media-breakpoint-up(sm) {
+	// 	--sPB: #{rem(100)};
+	// }
+	@include media-breakpoint-up(md) {
 		--sPB: #{rem(100)};
+		--sPT: #{rem(60)};
 	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(130)};
