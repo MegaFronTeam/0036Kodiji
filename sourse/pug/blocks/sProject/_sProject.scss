@@ -182,15 +182,15 @@
 	}
 	&__text-content {
 		max-width: rem(834);
+		@include  roww(rem(60));
 		.row {
 			&:not(:last-child) {
 				margin-bottom: rem(22);
 			}
 		}
-	}
-	&__text-wrap {
-		@include media-breakpoint-up(md) {
-			max-width: rem(379);
+		img{
+			margin-bottom: rem(16);
+			@extends .res-i;
 		}
 		h5 {
 			font-weight: 600;
@@ -207,6 +207,11 @@
 			@include media-breakpoint-up(lg) {
 				font-size: rem(16);
 			}
+		}
+	}
+	&__text-wrap {
+		@include media-breakpoint-up(md) {
+			max-width: rem(379);
 		}
 	}
 	&--2 {

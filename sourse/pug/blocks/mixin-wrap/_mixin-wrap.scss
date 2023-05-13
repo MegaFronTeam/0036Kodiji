@@ -114,6 +114,7 @@
 
 .chooseLang {
 	position: relative;
+	min-width: em(60);
 	&.active {
 		.chooseLang__btn {
 			background-color: $gray-800;

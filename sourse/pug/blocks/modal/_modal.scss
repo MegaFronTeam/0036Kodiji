@@ -9,8 +9,8 @@
 .modal-win {
 	// display: block;
 	background-color: #fff;
-	max-width: 100%;
 	position: relative;
+	max-width: 100%;
 	width: rem(1500);
 	// min-height: 100%; 
 	padding: 40px;
@@ -173,4 +173,11 @@ a {
     transform: translate3d(0, 10%, 0);
     opacity: 0;
   }
+}
+
+.fancybox__content{
+	.sForm__wrap{
+		max-width: 100%;
+		width: rem(1216);
+	}
 }
