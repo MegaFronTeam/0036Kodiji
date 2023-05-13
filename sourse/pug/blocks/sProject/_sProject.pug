@@ -44,10 +44,10 @@ mixin sProject(data)
 
 mixin sProject2(data)
 	// start sProject
-	+b.SECTION.sProject--2.section#sProject&attributes(attributes)
+	+b.SECTION.sProject.section#sProject&attributes(attributes)
 		.lines
 		+e.container.container
-			+img('img/sProject-bg-1.png').bg-img
+			//- +img('img/sProject-bg-1.png').bg-img
 			+e.row.row
 				.col
 					+b.section-title
@@ -57,7 +57,17 @@ mixin sProject2(data)
 				.col-lg-3
 					+e.btn.btn.btn-primary(href='#') Order project
 				.col-12
-					+img('img/sProject-img-1.png').img.res-i
+					+e.slider-wrap-bg
+						+e.slider-wrap
+							+e.slider--js.swiper
+								.swiper-wrapper
+									+e.slide.swiper-slide 
+											+img('img/project-preview.jpg')
+									+e.slide.swiper-slide 
+											+img('img/project-preview.jpg')
+									+e.slide.swiper-slide 
+											+img('img/project-preview.jpg')
+						+arrow
 			+e.wrap
 				+e.inner-row.row
 					.col-lg-8.col-xxl-9
@@ -94,4 +104,42 @@ mixin sProject2(data)
 								+e.tag
 									h5 Visit the website
 									a(href="https://www.bobbies.com/en/", target="_blank") https://www.bobbies.com/en/
+	// end sProject
+
+mixin sProject3(data)
+	// start sProject
+	+b.SECTION.sProject--3.section#sProject&attributes(attributes)
+		.lines
+		+e.container.container
+			//- +img('img/sProject-bg-1.png').bg-img
+			.row
+				.col
+					+b.section-title
+						+e.line
+						h2 Examples of KODIJI websites
+						p Discover the best websites created with KODIJI!
+				.col-lg-3
+					+e.btn.btn.btn-primary(href='#') Order project
+				.col-12
+					mixin item(img, title, text)
+						+e.item(href='#')
+							+e.img-wrap-tag
+								.img-wrap-center
+									+img(`img/${img}`, 'bg')
+							+e.content
+								h3!= title
+								p!= text
+					+e.card-row.row
+						.col-lg-6
+							+item('sProject-card-img-1.png', 'Huygens', 'Online store')
+						.col-lg-6
+							+item('sProject-card-img-2.png', 'Magimix', 'Online store')
+						.col-lg-6
+							+item('sProject-card-img-3.png', 'Bleu de Chauffe', 'Online store')
+						.col-lg-6
+							+item('sProject-card-img-4.png', 'Dealy', 'Online store')
+						.col-lg-6
+							+item('sProject-card-img-5.png', 'Le Chocolat Alain Ducasse', 'Online store')
+						.col-lg-6
+							+item('sProject-card-img-6.png', 'Visio Factory', 'Online store')
 	// end sProject

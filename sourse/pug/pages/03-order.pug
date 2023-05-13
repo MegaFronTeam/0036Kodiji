@@ -12,10 +12,10 @@ include ../blocks/sMoreThan/_sMoreThan.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '02-project.jpg'
+	- let  bg= null
 
 block title
-	- let  title= 'Project'
+	- let  title= 'Examples of KODIJI websites'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -23,8 +23,7 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+sProject2
-		+sMoreThan2
+		+sProject3
 		+sForm
 	+parts('footer')
       

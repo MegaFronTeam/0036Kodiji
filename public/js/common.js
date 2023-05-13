@@ -246,6 +246,78 @@ function eventHandler() {
 	}, { passive: true });
 
 	whenResize();
+
+
+	let defaultSl = {
+		spaceBetween: 0,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+	}
+	
+	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true
+	});
+	
+	const swiper4 = new Swiper('.sBanners__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+
+	});
+
+	const sMoreThanSwiper = new Swiper('.sMoreThan__slider--js', {
+		slidesPerView: 1,
+		// loop: true,
+		spaceBetween: 20,
+		pagination: {
+			el: '.sMoreThan__slider--js .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			998: {
+				slidesPerView: 3,
+			}
+		}
+	});
+
+	const sProjectSwiper = new Swiper('.sProject__slider--js', {
+		slidesPerView: 1,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
 	// modal window
 	document.addEventListener('click', function (e) {
 		let chooseLangTarget = e.target.closest('.chooseLang--js');

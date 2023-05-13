@@ -1,7 +1,7 @@
 // start .sMoreThan
 .sMoreThan {
-	--sPT: #{rem(60)};
-	--sPB: #{rem(60)};
+	--sPT: #{rem(94)};
+	--sPB: #{rem(90)};
 	--sTPB: #{rem(28.800)};
 	background-color: $body-color;
 	color: #fff;
@@ -20,8 +20,12 @@
 		z-index: -1;
 		pointer-events: none;
 	}
-	@include media-breakpoint-up(sm) {
+	// @include media-breakpoint-up(sm) {
+	// 	--sPB: #{rem(100)};
+	// }
+	@include media-breakpoint-up(md) {
 		--sPB: #{rem(100)};
+		--sPT: #{rem(60)};
 	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(130)};
@@ -70,7 +74,8 @@
 			}
 		}
 	}
-	&__col {
+	&__slide {
+		height: auto;
 		&:nth-child(odd) {
 			.sMoreThan__wrap {
 				&:not(:last-child) {
@@ -164,6 +169,42 @@
 			font-weight: 300;
 			line-height: 1.3;
 			color: $gray-600;
+		}
+	}
+	&__slider {
+		padding-bottom: rem(53);
+		.swiper-pagination-bullet {
+			background-color: rgba($color: #fff, $alpha: .5);
+			width: rem(30);
+			height: rem(3);
+			border-radius: 0;
+			&-active, &:hover {
+				background-color: #fff;
+			}
+		}
+	}
+	&--2 {
+		background-color: #ECEFF5;
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(110)};
+			--sPB: #{rem(110)};
+		}
+		&::after {
+			content: unset;
+		}
+		h2 {
+			color: $gray-900;
+		}
+		.sMoreThan__slider {
+			.swiper-pagination-bullet {
+				background-color: rgba($color: $gray-900, $alpha: .5);
+				width: rem(30);
+				height: rem(3);
+				border-radius: 0;
+				&-active, &:hover {
+					background-color: $gray-900;
+				}
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

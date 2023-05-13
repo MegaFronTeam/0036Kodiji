@@ -1,8 +1,12 @@
 // start .sAbout
 .sAbout {
-	--sPT: #{rem(70)};
-	--sPB: #{rem(70)};
+	--sPT: #{rem(80)};
+	--sPB: #{rem(68)};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(70)};
+		--sPB: #{rem(70)};
+	}
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(170)};
 		--sPB: #{rem(170)};
@@ -14,11 +18,17 @@
 	&__line {
 		position: absolute;
 		top: calc((var(--sPT) * -1) + rem(24));
-		left: 99.6%;
-		height: rem(212);
-		width: rem(2);
+		left: 21%;
+		height: rem(90);
+		width: rem(1);
 		background-color: $primary;
 		z-index: -1;
+		@include media-breakpoint-up(md) {
+			width: rem(2);
+			top: calc((var(--sPT) * -1) + rem(24));
+			left: 99.6%;
+			height: rem(212);
+		}
 		@include media-breakpoint-up(lg) {
 			left: 49.6%;
 		}
@@ -35,10 +45,14 @@
 			top: 100%;
 			left: 0;
 			transform: translateX(-50%);
-			width: rem(26);
-			height: rem(26);
+			width: rem(20);
+			height: rem(20);
 			border-radius: 50%;
 			background-color: $primary;
+			@include media-breakpoint-up(md) {
+				width: rem(26);
+				height: rem(26);
+			}
 		}
 	}
 	&__row{
@@ -61,6 +75,9 @@
 		max-width: rem(618);
 		@include media-breakpoint-up(xl) {
 			margin-bottom: rem(76);
+		}
+		@include media-breakpoint-down(md) {
+			text-align: center;
 		}
 		h2 {
 			margin-bottom: rem(15);

@@ -7,24 +7,68 @@ mixin sMoreThan(data)
 				h2 More than 500 completed projects
 				+e.line
 					span
-			+e.row.row
-				mixin item(img, text, avatar, title, subtext)
-					+e.item(href='#')
-						+e.wrap
-							+e.text!= text
-							+e.contacts
-								+img(`img/${avatar}`)
-								+e.title
-									h6!= title
-									p!= subtext
-						+e.wrap--img
-							.img-wrap-center
-								+img(`img/${img}`, 'bg')
+			mixin item(img, text, avatar, title, subtext)
+				+e.item(href='#')
+					+e.wrap
+						+e.text!= text
+						+e.contacts
+							+img(`img/${avatar}`)
+							+e.title
+								h6!= title
+								p!= subtext
+					+e.wrap--img
+						.img-wrap-center
+							+img(`img/${img}`, 'bg')
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-1.png', '&laquo;Thanks to&nbsp;PrestaShop software, we&nbsp;were able to&nbsp;create a&nbsp;multilingual and multi-currency ecommerce site at&nbsp;a&nbsp;very reasonable total cost. &raquo;', 'avatar-1.png', 'Jean Michel Awad', 'Chief Operating Officer, Bobbies')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-2.png', '&quot; PrestaShop is&nbsp;a&nbsp;reliable software that has enabled&nbsp;us to&nbsp;constantly evolve our site over the last 6&nbsp;years, all while allowing&nbsp;us to&nbsp;work independently, thanks to&nbsp;an&nbsp;intuitive back office. &quot;', 'avatar-2.png', 'Daan Sins', 'Digital Marketing and Communication Director, Pylones')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-3.png', '&quot; PrestaShop is&nbsp;a&nbsp;handy, modular tool that allows&nbsp;us to&nbsp;continue to&nbsp;develop our omnichannel strategy. &quot;', 'avatar-3.png', 'Wassila Moussaoui', 'Wassila Moussaoui', 'Co-founder, Huygens')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-1.png', '&laquo;Thanks to&nbsp;PrestaShop software, we&nbsp;were able to&nbsp;create a&nbsp;multilingual and multi-currency ecommerce site at&nbsp;a&nbsp;very reasonable total cost. &raquo;', 'avatar-1.png', 'Jean Michel Awad', 'Chief Operating Officer, Bobbies')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-2.png', '&quot; PrestaShop is&nbsp;a&nbsp;reliable software that has enabled&nbsp;us to&nbsp;constantly evolve our site over the last 6&nbsp;years, all while allowing&nbsp;us to&nbsp;work independently, thanks to&nbsp;an&nbsp;intuitive back office. &quot;', 'avatar-2.png', 'Daan Sins', 'Digital Marketing and Communication Director, Pylones')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-3.png', '&quot; PrestaShop is&nbsp;a&nbsp;handy, modular tool that allows&nbsp;us to&nbsp;continue to&nbsp;develop our omnichannel strategy. &quot;', 'avatar-3.png', 'Wassila Moussaoui', 'Wassila Moussaoui', 'Co-founder, Huygens')
+				.swiper-pagination
+	// end sMoreThan
 
-				+e.col.col-md-6.col-lg-4
-					+item('sMoreThan-img-1.png', '&laquo;Thanks to&nbsp;PrestaShop software, we&nbsp;were able to&nbsp;create a&nbsp;multilingual and multi-currency ecommerce site at&nbsp;a&nbsp;very reasonable total cost. &raquo;', 'avatar-1.png', 'Jean Michel Awad', 'Chief Operating Officer, Bobbies')
-				+e.col.col-md-6.col-lg-4
-					+item('sMoreThan-img-2.png', '&quot; PrestaShop is&nbsp;a&nbsp;reliable software that has enabled&nbsp;us to&nbsp;constantly evolve our site over the last 6&nbsp;years, all while allowing&nbsp;us to&nbsp;work independently, thanks to&nbsp;an&nbsp;intuitive back office. &quot;', 'avatar-2.png', 'Daan Sins', 'Digital Marketing and Communication Director, Pylones')
-				+e.col.col-md-6.col-lg-4
-					+item('sMoreThan-img-3.png', '&quot; PrestaShop is&nbsp;a&nbsp;handy, modular tool that allows&nbsp;us to&nbsp;continue to&nbsp;develop our omnichannel strategy. &quot;', 'avatar-3.png', 'Wassila Moussaoui', 'Wassila Moussaoui', 'Co-founder, Huygens')
+mixin sMoreThan2(data)
+	// start sMoreThan
+	+b.SECTION.sMoreThan--2.section#sMoreThan&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Yoy may also interested in
+				+e.line
+					span
+			mixin item(img, text, avatar, title, subtext)
+				+e.item(href='#')
+					+e.wrap
+						+e.text!= text
+						+e.contacts
+							+img(`img/${avatar}`)
+							+e.title
+								h6!= title
+								p!= subtext
+					+e.wrap--img
+						.img-wrap-center
+							+img(`img/${img}`, 'bg')
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-1.png', '&laquo;Thanks to&nbsp;PrestaShop software, we&nbsp;were able to&nbsp;create a&nbsp;multilingual and multi-currency ecommerce site at&nbsp;a&nbsp;very reasonable total cost. &raquo;', 'avatar-1.png', 'Jean Michel Awad', 'Chief Operating Officer, Bobbies')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-2.png', '&quot; PrestaShop is&nbsp;a&nbsp;reliable software that has enabled&nbsp;us to&nbsp;constantly evolve our site over the last 6&nbsp;years, all while allowing&nbsp;us to&nbsp;work independently, thanks to&nbsp;an&nbsp;intuitive back office. &quot;', 'avatar-2.png', 'Daan Sins', 'Digital Marketing and Communication Director, Pylones')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-3.png', '&quot; PrestaShop is&nbsp;a&nbsp;handy, modular tool that allows&nbsp;us to&nbsp;continue to&nbsp;develop our omnichannel strategy. &quot;', 'avatar-3.png', 'Wassila Moussaoui', 'Wassila Moussaoui', 'Co-founder, Huygens')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-1.png', '&laquo;Thanks to&nbsp;PrestaShop software, we&nbsp;were able to&nbsp;create a&nbsp;multilingual and multi-currency ecommerce site at&nbsp;a&nbsp;very reasonable total cost. &raquo;', 'avatar-1.png', 'Jean Michel Awad', 'Chief Operating Officer, Bobbies')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-2.png', '&quot; PrestaShop is&nbsp;a&nbsp;reliable software that has enabled&nbsp;us to&nbsp;constantly evolve our site over the last 6&nbsp;years, all while allowing&nbsp;us to&nbsp;work independently, thanks to&nbsp;an&nbsp;intuitive back office. &quot;', 'avatar-2.png', 'Daan Sins', 'Digital Marketing and Communication Director, Pylones')
+					+e.slide.swiper-slide
+						+item('sMoreThan-img-3.png', '&quot; PrestaShop is&nbsp;a&nbsp;handy, modular tool that allows&nbsp;us to&nbsp;continue to&nbsp;develop our omnichannel strategy. &quot;', 'avatar-3.png', 'Wassila Moussaoui', 'Wassila Moussaoui', 'Co-founder, Huygens')
+				.swiper-pagination
 	// end sMoreThan
